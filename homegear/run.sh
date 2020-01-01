@@ -13,6 +13,9 @@ mkdir -p /config/homegear/config
 cp -R /etc/homegear/* /config/homegear/config
 mv /main.conf /config/homegear/config/main.conf
 
+mkdir -p /var/log/homegear
+chown homegear:homegear /var/log/homegear
+
 mkdir -p /var/run/homegear
 chown homegear:homegear /var/run/homegear
 /etc/homegear/homegear-start.sh
