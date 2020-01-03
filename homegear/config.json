@@ -25,7 +25,7 @@
       "ssl"
     ],
     "schema": {
-      "devices": ["match(\/dev\/tty[A-Z]*[0-9]:rwm)"],
+      "devices": ["match(\/dev\/*:rwm)"],
       "ssl": "bool"
     },
     "options": {
