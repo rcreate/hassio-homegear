@@ -29,7 +29,7 @@
       "ssl": "bool"
     },
     "options": {
-      "devices": ["/dev/ttyAMA0:rwm"],
+      "devices": ["/dev/spidev0.0:rwm"],
       "ssl": false
   }
 }
