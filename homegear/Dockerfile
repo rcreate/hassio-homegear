@@ -20,7 +20,7 @@ rm /var/lib/homegear/homegear_updated
 
 COPY main.conf /main.conf
 COPY run.sh /run.sh
-RUN chmod +x /run.sh
+RUN chmod +x /run.sh && chown 105:106 /var/lib/homegear/tmp/php/
 ENTRYPOINT ["/bin/bash", "-c", "/run.sh"]
 
 
@@ -41,3 +41,4 @@ LABEL \
     org.label-schema.vcs-ref=${BUILD_REF} \
     org.label-schema.vcs-url="https://github.com/tringler/hassio-ubuntu-base" \
     org.label-schema.vendor="https://github.com/tringler"
+

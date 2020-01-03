@@ -11,10 +11,11 @@ trap _term SIGTERM
 
 mkdir -p /config/homegear/config
 mv -n /main.conf /config/homegear/config/main.conf
-cp -R /etc/homegear/* /config/homegear/config
+cp -nR /etc/homegear/* /config/homegear/config
 
 mkdir -p /var/log/homegear
-chown homegear:homegear /var/log/homegear
+touch /var/log/homegear/homegear.log
+chown -R homegear:homegear /var/log/homegear
 
 mkdir -p /var/run/homegear
 chown homegear:homegear /var/run/homegear
