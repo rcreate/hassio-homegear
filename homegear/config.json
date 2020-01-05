@@ -1,6 +1,6 @@
 {
     "name": "Homegear",
-    "version": "0.1",
+    "version": "0.1.7",
     "slug": "homegear",
     "description": "Homegear hassio add-on",
     "auto_uart": true,
@@ -25,11 +25,13 @@
       "ssl"
     ],
     "schema": {
-      "devices": ["match(\/dev\/*:rwm)"],
       "ssl": "bool"
     },
+    "devices": [
+      "/dev/spidev0.0:/dev/spidev0.0:rwm"
+    ],
+    "gpio": true,
     "options": {
-      "devices": ["/dev/spidev0.0:rwm"],
       "ssl": false
   }
 }

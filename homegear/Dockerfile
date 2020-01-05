@@ -13,12 +13,11 @@ apt update && \
 apt install -y homegear homegear-management homegear-adminui homegear-homematicbidcos \
     homegear-influxdb && \
 \
-
 rm /var/lib/homegear/homegear_updated
 
 COPY main.conf /main.conf
 COPY run.sh /run.sh
-RUN chmod +x /run.sh && chown 105:106 /var/lib/homegear/tmp/php/
+RUN chmod +x /run.sh
 ENTRYPOINT ["/bin/bash", "-c", "/run.sh"]
 
 

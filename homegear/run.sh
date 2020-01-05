@@ -12,6 +12,7 @@ trap _term SIGTERM
 mkdir -p /config/homegear/config
 mv -n /main.conf /config/homegear/config/main.conf
 cp -nR /etc/homegear/* /config/homegear/config
+cp -R /config/homegear/config/* /etc/homegear/
 
 mkdir -p /var/log/homegear
 touch /var/log/homegear/homegear.log
@@ -20,7 +21,7 @@ chown -R homegear:homegear /var/log/homegear
 mkdir -p /var/run/homegear
 chown homegear:homegear /var/run/homegear
 /etc/homegear/homegear-start.sh
-homegear -c /config/homegear/config -u homegear -g homegear -p /var/run/homegear/homegear.pid &
+homegear -u homegear -g homegear -p /var/run/homegear/homegear.pid &
 homegear-management -p /var/run/homegear/homegear-management.pid &
 tail -f /var/log/homegear/homegear.log &
 child=$!
