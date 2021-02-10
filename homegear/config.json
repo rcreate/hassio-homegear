@@ -33,6 +33,6 @@
     "options": {},
     "ingress": true,
     "ingress_port": 2001,
-    "ingress_entry": "/admin",
+    "ingress_entry": "/",
     "panel_icon": "mdi:gear"
 }
