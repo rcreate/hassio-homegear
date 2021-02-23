@@ -1,5 +1,5 @@
 {
     "name": "Homegear Hass.io add-on",
-    "url": "https://github.com/drivin/hassio-homegear",
-    "maintainer": "Thomas Ringler <mail@thomas-ringler.de>; forked by drivin <pino@goqu.de>"
+    "url": "https://github.com/noxiii/hassio-homegear",
+    "maintainer": "noxiii <homegear-github@nippox.de>; forked by drivin <pino@goqu.de>"
 }
