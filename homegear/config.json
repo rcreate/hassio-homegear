@@ -1,6 +1,6 @@
 {
     "name": "Homegear",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "slug": "homegear",
     "description": "Homegear hassio add-on",
     "uart": true,
