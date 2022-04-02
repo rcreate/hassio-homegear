@@ -1,15 +1,11 @@
 {
     "name": "Homegear",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "slug": "homegear",
     "description": "Homegear hassio add-on",
     "uart": true,
     "url": "https://github.com/rcreate/hassio-homegear",
     "startup": "services",
-    "privileged": [
-      "SYS_ADMIN",
-      "SYS_RAWIO"
-    ],
     "arch": [
       "aarch64",
       "amd64",
@@ -19,7 +15,6 @@
     ],
     "boot": "auto",
     "apparmor": false,
-    "full_access": true,
     "ports": {
       "2001/tcp": 2001
     },
@@ -34,11 +29,10 @@
       "/dev/spidev0.0",
       "/dev/spidev0.1"
     ],
-    "udev": true,
     "gpio": true,
     "schema": {},
     "options": {},
     "ingress": true,
     "ingress_port": 2001,
-    "panel_icon": "mdi:gear"
+    "panel_icon": "mdi:beach"
 }
