@@ -12,9 +12,7 @@ apt install -y apt-transport-https curl gpg && \
 curl -fsSL https://apt.homegear.eu/Release.key | gpg --dearmor -o /usr/share/keyrings/homegear-archive-keyring.gpg && \
 echo 'deb [signed-by=/usr/share/keyrings/homegear-archive-keyring.gpg] https://apt.homegear.eu/debian/bullseye/homegear/stable/ bullseye main' > /etc/apt/sources.list.d/homegear.list && \
 apt update && \
-apt install -y homegear-gateway && \
-\
-rm /var/lib/homegear/homegear_updated
+apt install -y homegear-gateway
 
 COPY main.conf /main.conf
 COPY homematicbidcos.conf /homematicbidcos.conf
