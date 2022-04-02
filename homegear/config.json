@@ -16,10 +16,12 @@
     "boot": "auto",
     "apparmor": false,
     "ports": {
-      "2001/tcp": 2001
+      "2001/tcp": 2001,
+      "80/tcp": 8124
     },
     "ports_description": {
-      "2001/tcp": "HomeGear UI"
+      "2001/tcp": "HomeGear UI",
+      "8124/tcp": "HomeGear Admin"
     },
     "map": [
       "config:rw",
@@ -33,6 +35,6 @@
     "schema": {},
     "options": {},
     "ingress": true,
-    "ingress_port": 2001,
+    "ingress_port": 80,
     "panel_icon": "mdi:beach"
 }
