@@ -1,5 +1,5 @@
 {
-    "name": "Homegear Hass.io add-on",
+    "name": "Homegear Hass.io add-on (debian-based)",
     "url": "https://github.com/rcreate/hassio-homegear",
     "maintainer": "rcreate (https://github.com/rcreate)"
 }
