@@ -22,8 +22,6 @@ chown -R homegear:homegear /var/log/homegear
 
 mkdir -p /var/run/homegear
 chown homegear:homegear /var/run/homegear
-systemctl enable homegear-gateway
-systemctl restart homegear-gateway
 /etc/homegear/homegear-start.sh
 homegear -u homegear -g homegear -p /var/run/homegear/homegear.pid &
 homegear-management -p /var/run/homegear/homegear-management.pid &

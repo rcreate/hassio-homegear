@@ -1,3 +1,4 @@
+#ARG BUILD_FROM=debian:bullseye
 ARG BUILD_FROM=homeassistant/base-debian:bullseye
 FROM ${BUILD_FROM}
 
@@ -5,10 +6,9 @@ FROM ${BUILD_FROM}
 RUN \
 echo "[INFO] Install Homegear" && \
 apt update && \
-apt install -y apt-transport-https && \ 
-curl https://apt.homegear.eu/Release.key | apt-key add - && \
-echo 'deb https://apt.homegear.eu/debian/ bullseye/' | tee /etc/apt/sources.list.d/homegear.list && \
-\
+apt install -y apt-transport-https curl gpg && \
+curl -fsSL https://apt.homegear.eu/Release.key | gpg --dearmor -o /usr/share/keyrings/homegear-archive-keyring.gpg && \
+echo 'deb [signed-by=/usr/share/keyrings/homegear-archive-keyring.gpg] https://apt.homegear.eu/debian/bullseye/homegear/stable/ bullseye main' > /etc/apt/sources.list.d/homegear.list && \
 apt update && \
 apt install -y homegear homegear-management homegear-adminui homegear-homematicbidcos homegear-gateway \
     homegear-influxdb && \
