@@ -21,11 +21,11 @@ touch /var/log/homegear/homegear.log
 chown -R homegear:homegear /var/log/homegear
 
 mkdir -p /var/run/homegear
-chown root:root /var/run/homegear
+chown homegear:homegear /var/run/homegear
 /etc/homegear/homegear-start.sh
-homegear -u root -g root -p /var/run/homegear/homegear.pid &
+homegear -u homegear -g homegear -p /var/run/homegear/homegear.pid &
 homegear-management -p /var/run/homegear/homegear-management.pid &
-homegear-gateway -u root -g root -c /etc/homegear/ -p /var/run/homegear/homegear-gateway.pid -d &
-tail -f /var/log/homegear/homegear.log &
+homegear-gateway -u homegear -g homegear -p /var/run/homegear/homegear-gateway.pid -d &
+tail -f /var/log/homegear-gateway/homegear-gateway.log &
 child=$!
 wait "$child"

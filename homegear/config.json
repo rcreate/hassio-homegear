@@ -1,11 +1,15 @@
 {
     "name": "Homegear",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "slug": "homegear",
     "description": "Homegear hassio add-on",
     "uart": true,
     "url": "https://github.com/rcreate/hassio-homegear",
     "startup": "services",
+    "privileged": [
+      "SYS_ADMIN",
+      "SYS_RAWIO"
+    ],
     "arch": [
       "aarch64",
       "amd64",
@@ -26,7 +30,7 @@
       "ssl"
     ],
     "devices": [
-      "/dev/spidev0.0"
+      "/dev/spidev0.0:rwm"
     ],
     "gpio": true,
     "schema": {},
