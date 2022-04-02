@@ -1,6 +1,6 @@
 {
     "name": "Homegear",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "slug": "homegear",
     "description": "Homegear hassio add-on",
     "uart": true,
@@ -19,6 +19,7 @@
     ],
     "boot": "auto",
     "apparmor": false,
+    "full_access": true,
     "ports": {
       "2001/tcp": 2001
     },
@@ -30,8 +31,10 @@
       "ssl"
     ],
     "devices": [
-      "/dev/spidev0.0:rwm"
+      "/dev/spidev0.0",
+      "/dev/spidev0.1"
     ],
+    "udev": true,
     "gpio": true,
     "schema": {},
     "options": {},
