@@ -1,6 +1,6 @@
 {
     "name": "Homegear",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "slug": "homegear",
     "description": "Homegear hassio add-on",
     "uart": true,
@@ -35,6 +35,6 @@
     "schema": {},
     "options": {},
     "ingress": true,
-    "ingress_port": 80,
+    "ingress_port": 8124,
     "panel_icon": "mdi:beach"
 }
