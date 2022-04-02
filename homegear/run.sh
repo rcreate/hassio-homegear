@@ -18,6 +18,7 @@ cp -R /config/homegear/config/* /etc/homegear/
 
 mkdir -p /var/log/homegear
 touch /var/log/homegear/homegear.log
+touch /var/log/homegear-gateway/homegear-gateway.log
 chown -R homegear:homegear /var/log/homegear
 
 mkdir -p /var/run/homegear
