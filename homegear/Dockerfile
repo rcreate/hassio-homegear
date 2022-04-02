@@ -10,7 +10,7 @@ echo "[INFO] Install Homegear" && \
 apt update && \
 apt install -y apt-transport-https curl gpg && \
 curl -fsSL https://apt.homegear.eu/Release.key | gpg --dearmor -o /usr/share/keyrings/homegear-archive-keyring.gpg && \
-echo 'deb [signed-by=/usr/share/keyrings/homegear-archive-keyring.gpg] https://apt.homegear.eu/raspbian/bullseye/homegear/stable/ bullseye main' > /etc/apt/sources.list.d/homegear.list && \
+echo 'deb [signed-by=/usr/share/keyrings/homegear-archive-keyring.gpg] https://apt.homegear.eu/debian/bullseye/homegear/stable/ bullseye main' > /etc/apt/sources.list.d/homegear.list && \
 apt update && \
 apt install -y homegear-gateway && \
 \
