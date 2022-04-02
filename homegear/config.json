@@ -4,7 +4,7 @@
     "slug": "homegear",
     "description": "Homegear hassio add-on",
     "auto_uart": true,
-    "url": "https://github.com/tringler/hassio-homegear",
+    "url": "https://github.com/rcreate/hassio-homegear",
     "startup": "services",
     "arch": [
       "aarch64",
